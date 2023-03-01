@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1> Задача 10</h1>
+	<p>
+	Знайти суму всіх непарних чисел, 
+	що знаходяться між заданими користувачем числами.
+	</p>
+	<script>
+		let totalSumNumber = 0
+		let oddNumber = 0
+		let userFirstNumber = parseInt(prompt('Введіть початкове число'))
+		let userSecondNumber = parseInt(prompt('Введіть кінцеве число'))
+			
+		for (let i = userFirstNumber; i <= userSecondNumber ; i+=2) {
+			totalSumNumber+=i
+			oddNumber++
+		}
+		document.write(`${totalSumNumber}`)
+	</script>
+</body>
+
+</html>
+
+

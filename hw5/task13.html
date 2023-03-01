@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1> Задача 13</h1>
+	<p>
+		 Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром 10*10. 
+		 Маючи К снарядів користувач намагається потопити корабель. 
+	</p>
+	<script>
+		const randomShipPositionX = 1 + Math.floor(Math.random()*10)
+		const randomShipPositionY = 1 + Math.floor(Math.random()*10)
+		let bulletsAmount = parseInt(prompt('Вкажіть кількість снарядів'))
+		let userAttempts = 0
+		let result
+		for (let i = 0; i < bulletsAmount; i++) {
+			let userTargetX = parseInt(prompt('Спробуйте потопити корабель. Введіть координати по осі Х'))
+			let userTargetY = parseInt(prompt('Введіть координати по осі Y'))
+			if(randomShipPositionX!==userTargetX && randomShipPositionY!==userTargetY){
+			userAttempts -= bulletsAmount
+			result = `Ви не влучили.`
+			alert(`${result}`)
+			}
+			else {
+			result = `Ви влучили в ціль. Корабель потоплено!`
+			alert(`${result}`) 
+			break
+			}
+		}
+		document.write(`${result}`)
+	</script>
+</body>
+
+</html>
+
+

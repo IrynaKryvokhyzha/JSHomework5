@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1> Задача 3</h1>
+	<p>
+		Вивести таблицю з одним рядком і 7 стовпцями.
+	</p>
+	<script>
+		let table = '<table border = "2"><tr>'
+		for (let num = 1; num <= 7; num++) {
+			table += `<td>${num}</td>`
+			
+		}
+		table += `</tr></table>`
+		document.write(table)
+	</script>
+</body>
+
+</html>
